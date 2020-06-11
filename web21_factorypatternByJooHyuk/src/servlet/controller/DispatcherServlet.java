@@ -26,17 +26,15 @@ public class DispatcherServlet extends HttpServlet {
 	
 	protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ControllerFactory cf = ControllerFactory.getInstance();
-		Controller controller = cf.createController(request.getParameter("command"));
 		String path = "index.jsp";
 		try {
-			path = controller.execute(request, response);
+			path = cf.createController(request.getParameter("command")).execute(request, response);
 			request.getRequestDispatcher(path).forward(request, response);
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
 			request.getRequestDispatcher(path).forward(request, response);
 		} catch (Exception e) {
-			
 			e.printStackTrace();
 			request.getRequestDispatcher(path).forward(request, response);
 		}
