@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+var xhr;
+var nick;
+    function startRequest(){
+        nick = document.frm.nickname;
+
+        xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = callback;
+        xhr.open("get","CountServlet?nick="+nick.value);
+        console.log(nick.value);
+        xhr.send(null);
+    }
+    function callback(){
+    	if(xhr.readyState==4){
+            if(xhr.status==200){
+                var text = xhr.responseText;
+                document.getElementById("resultView").innerHTML = "<h4><font color=blue>"+text+"</font></h4>";
+            }
+        }
+        nick.value ="";
+        nick.focus();
+    }
+</script>
+</head>
+<body>
+<h2>Encoding Processing</h2>
+<form name="frm">
+    nickname <input type="button" onclick="startRequest()" value="Start CountServlet">
+    <input type="text" name="nickname">
+</form>
+<div id="resultView"></div>
+</body>
+</html>

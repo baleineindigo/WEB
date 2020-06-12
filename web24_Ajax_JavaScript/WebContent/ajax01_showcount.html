@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+var xhr;
+    function startRequest(){
+        xhr = new XMLHttpRequest();
+        
+        xhr.onreadystatechange = callback;
+        xhr.open("get","CountServlet?id=ajax&&pass=1212");
+		xhr.send(null);     
+    }
+    function callback(){
+    	if(xhr.readyState==4){
+            if(xhr.status==200){
+                var text = xhr.responseText;
+                document.getElementById("resultView").innerHTML = "<h4><font color=blue>"+text+"</font></h4>";
+            }
+        }
+    }
+</script>
+
+</head>
+<body>
+<h2>Show Count</h2>
+<input type="button" value="count up" onclick="startRequest()">
+<div id="resultView"></div>
+</body>
+</html>
