@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+    var xhr;
+    function startRequest(){
+        var id = document.getElementById("id").value;
+        xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = callback;
+        xhr.open("post","idCheck.do");
+        xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=utf-8");
+        xhr.send("id="+id);
+    }
+    function callback(){
+        if(xhr.readyState==4){
+            if(xhr.status==200){
+                var flag = xhr.responseText;
+                var resultSpan = document.getElementById("idCheckView");
+                if(flag=="true"){
+                    resultSpan.innerHTML = "<font color=yellow>USE THIS!</font>";
+                }else{
+                    "<font color=red>CANNOT USE THIS!</font>";
+                }
+            }
+        }
+    }
+</script>
+</head>
+<body>
+<h3>REGISTER</h3>
+<form action="register.do" name="registerForm" >
+<input type="hidden" name="command"  value="register">
+ID : <input type="text" name="id" id="id" required="required" onchange="startRequest()">
+<span id="idCheckView"></span>
+PASSWORD : <input type="password" name="password" required="required"><br><br>
+NAME : <input type="text" name="name" required="required"><br><br>
+ADDRESS : <input type="text" name="address" required="required"><br><br>
+
+<input type="submit" value="member register">
+</form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function() {
+   $('#send').click(function() {
+       $.ajax({
+           type:'post',
+           url:"http://localhost:8080/member.xml",
+           dataType:"xml",
+
+           success:function(result){
+               var str = '';
+               $(result).find('member').each(function() {
+                   var id = $(this).find('id').text();
+                   var name = $(this).find('name').text();
+                   var addr = $(this).find('addr').text();
+                
+                str +='<td>';
+                str+='<td>'+id+'</td>';
+                str+='<td>'+name+'</td>';
+                str+='<td>'+addr+'</td>';
+                str +='</td>';
+               });
+               $('$table tr:gt(0)').remove();
+               $('#table').append(str);
+           },
+           error:function(err){
+               alert("�ㅻ�諛���=========>"+err);
+           }
+           
+       });
+   });
+});
+</script>
+</head>
+<body>
+<h2>================</h2>
+<a href="http://localhost:8080/member.xml" id="send">Read XML data</a>
+<table border="2" id="table">
+<tr>
+    <th>���대��</th>
+    <th>�대�</th>
+    <th>二쇱��</th>
+</tr>
+</table>
+</body>
+</html>

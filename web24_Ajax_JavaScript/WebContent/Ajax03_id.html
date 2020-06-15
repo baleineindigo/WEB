@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var xhr;
+	var uid;
+	function startRequest(){
+		uid = document.frm.userId.value;
+	
+		xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = callback;
+		xhr.open("get","AjaxServlet?userId="+uid);
+		xhr.send(null);
+	}
+	
+	function callback(){
+		if(xhr.readystate==4){
+			if(xhr.status==200){
+				document.getElementById("resultView").innerHTML = 
+				"<font color=blue size=5>"+xhr.responseText+"</font>";
+				document.frm.userId.value="";
+				document.frm.userId.focus();
+			}else{
+				document.getElementById("resultView").innerHTML
+				="<img src=img/a.gif>";
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	
+	<h2>Async ID sending</h2>
+	<form name="frm">
+	ID <input type="text" name="userId" placeholder="Insert Id">
+	<input type="button" value="idCheck" onclick="startRequest()">
+	<div id="resultView"></div>
+	</form>
+</body>
+</html>

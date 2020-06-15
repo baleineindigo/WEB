@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$(function() {
+
+		$('#ajaxBtn').click(function(){
+			var id = $('#id').val();
+			var pass = $('#pass').val();
+			
+			$.ajax({
+			type:"post",
+			url:"JQueryAjax",
+			data:"id="+id+"&&pass="+pass,
+			
+			success:function(result){
+				$('#resultView').html(result).css({
+					'background' : 'yellow',
+					'color':'red',
+					'font-weight' : 'bold'
+				});			
+				//callback
+			}
+			});
+		});	
+	});
+</script>
+</head>
+<body>
+	<h2>Ajax Using jquery</h2>
+	id<input type="text" name="userId" id="id"><br><br>
+	password <input type="password" name="userPass" id="pass">
+	<input type="button" value="ajaxBtn" id="ajaxBtn">
+	<span id="resultView"></span>
+
+</body>
+</html>

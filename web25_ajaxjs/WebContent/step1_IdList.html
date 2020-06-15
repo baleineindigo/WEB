@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+    <h2>"Search ID" Ajax and Factory Pattern</h2>
+    <a href="idList.do">search id</a>
+<!--0. IdListController ::
+ㅡ		Member테이블의 모든 아이디를 가져온다...showAllMember()
+		ArrayList 리턴... 바인딩
+		네비게이션... show idList.jsp
+1. show_idList.jsp :: 
+		List 폼으로 화면을 작성
+		List 폼에 잇는 아이디 하나를 선택하면 해당하는 아이디 옆에 나머지 정보가 출력되도록...
+		command?=findMember
+2. FindController ::
+		id에 해당하는 VO를 리턴
+		바인딩
+		show_idList.jsp 특정 영역으로 나머지 ㅈ ㅓㅇ보들을 출력.. 마지막 이미지 참조.-->
+</body>
+</html>

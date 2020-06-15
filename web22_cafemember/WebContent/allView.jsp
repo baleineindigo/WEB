@@ -19,8 +19,7 @@
 			<td>${member.address}</td>
 		</tr>
 	</c:forEach>
-	
-	<a href="index.jsp" >홈으로</a><br>
+	<a href="#" >홈으로</a><br>
 </table>
 </body>
 </html>
