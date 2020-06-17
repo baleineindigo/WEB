@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(function() {
+        $('#player').change(function() {
+        //    alert("ajax...");
+        $.ajax({
+            type:'post',
+            url:'AddressAjax',
+            data:"name="+$(this).val(),
+            success:function(data){
+            	("#resultView").html(data);
+            },//success callback
+
+            error:function(){
+                alert("Process Delay!")
+            },//error callback
+            timeout:1000,
+        });//ajax
+       });//click
+    });//ready
+</script>
+</head>
+<body>
+<select id="player">
+    <option value="none">===========ZZZZZZZZ=============</option>
+    <option value="A">===========  A  =============</option>
+    <option value="B">===========  B  =============</option>
+    <option value="C">===========  C  =============</option>
+    <option value="D">===========  D  =============</option>
+</select>
+<span id="resultView"></span>
+</body>
+</html>

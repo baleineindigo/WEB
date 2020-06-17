@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(function(){
+	  $('#jsonBtn').click(function() {
+          $.ajax({
+              type:'post',
+              url:'JsonAjax',
+              dataType:'json',
+
+            success:function(data){
+                $('resultView').html(data.banana.maker+" , "+data.banana.price);
+            }//callback
+          });//ajax
+      });//click
+    });//function
+</script>
+</head>
+<body>
+    <input type="button" value="json-Btn" id="jsonBtn">
+    <span id="resultView"></span>
+</body>
+</html>

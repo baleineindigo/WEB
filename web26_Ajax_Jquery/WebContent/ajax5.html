@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(function(){
+	    $('#regBtn').click(function() {
+	      $.ajax({
+              type:'post',
+              url:'SerialAjax',
+              data:$('#frm').serialize(),
+
+              success:function(data){
+                  $('#regView').html(data).css({
+                      'background':'yellow',
+                      'font-weight':'bold',
+                      'color':'blue'
+                  })//success
+              }//callback
+          });//ajax
+	    });//click
+    });//function
+</script>
+</head>
+<body>
+    <form action="SerialAjax" id="frm">
+    <h2>Register From</h2>
+        NAME <input type="text" name="name">
+        ADDR <input type="text" name="addr">
+        <input type="hidden" name="command" value="register"><br/>
+        <input type="button" value="register" id="regBtn">
+    </form>
+    <span id="regView"></span>
+</body>
+</html>

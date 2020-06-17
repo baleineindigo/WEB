@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(function(){
+	    $('#frm').submit(function() {
+	       var query = $(this).serialize();
+           alert(query);
+           return false;
+	    });
+    });
+</script>
+</head>
+<body>
+    <form action="SerialAjax" id="frm">
+        NAME <input type="text" name="name">
+        <input type="hidden" name="command" value="register"><br/>
+        <select name="tool" id="">
+            <option value="">EditPlus</option>
+            <option value="">Amateras</option>
+            <option value="">WorkBench</option>
+            <option value="">ObjectAid</option>
+        </select><br>
+        <input type="checkbox" name="program" value="python">python
+        <input type="checkbox" name="program" value="Numpy">Numpy
+        <input type="checkbox" name="program" value="Pandas">Pandas
+        <br>
+        <input type="submit" value="FormDataSend">
+
+    </form>
+</body>
+</html>

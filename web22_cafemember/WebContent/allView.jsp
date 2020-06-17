@@ -8,18 +8,31 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function(){
+	    $('.idtargets').mouseover(function() {
+			console.log($('#password').val());
+	    });
+    });
+</script>
 </head>
 <body>
 <h3 align="center">회원 명단 보기</h3><p>
 <table border="2" width="350" bgcolor="yellow" align="center">
 	<c:forEach items="${list}" var="member">
 		<tr>
-			<td>${member.id}</td>
+			<td id="${member.id}" class="idtargets">${member.id}</td>
 			<td>${member.name}</td>
 			<td>${member.address}</td>
 		</tr>
 	</c:forEach>
 	<a href="#" >홈으로</a><br>
+	<tr>
+		<td>password:::</td>
+		<td id="password"></td>
+		<td></td>
+	</tr>
 </table>
 </body>
 </html>
