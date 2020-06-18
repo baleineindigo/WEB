@@ -13,10 +13,18 @@
 	<tr>
 		<c:forEach items="${list}"   var="item">
 			<td>
-				<a href="itemDetail.do?command=detail&&itemNumber=${item.itemNumber}"><img alt="" src="${item.url}" width="150" height="150" border="2"></a><br/>
+				<a href="itemDetail.do?itemNumber=${item.itemNumber}"><img alt="" src="${item.url}" width="150" height="150" border="2"></a><br/>
 				상품명 : ${item.name} <br/>
 				가  격 : ${item.price}원
 			</td>
+		</c:forEach>
+	</tr>
+</table>
+<h2 align="center"><font color="purple">Items you were interested in ::: </font></h2>
+<table align="center">
+	<tr>
+		<c:forEach items="${fruits}" var="fruit">
+			<a href="itemDetail.do?itemNumber=${itemNumber} }"><img alt="" src="${fruit}" width="150" height="150" border="2"></a>
 		</c:forEach>
 	</tr>
 </table>

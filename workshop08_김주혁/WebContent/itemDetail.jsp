@@ -36,31 +36,52 @@
   opacity: 0.7;
 }
 </style>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  $(function() {
+    $('#addtocart').click(function() {
+      // alert(localStorage.length);
+		  var itemNumber =  $('#itemNumber').val();
+      var itemName = $('#itemName').val();
+      var itemUrl = $('#itemUrl').val();
+      var itemPrice = $('#itemPrice').val();
+      console.log(itemNumber);
+      console.log(itemName);
+      console.log(itemUrl);
+      console.log(itemPrice);
+
+      var addedItem = localStorage.getItem(itemNumber);
+      if (addedItem==null) {
+        var cartitem = {
+        cartitemNumber:itemNumber,
+        cartitemUrl:itemUrl,
+        cartitemName:itemName,
+        cartitemPrice : itemPrice,
+        cartitemCount : 1
+        };
+        localStorage.setItem(itemNumber,cartitem);
+      } else {
+        addedItem.cartitemCount += addedItem.cartitemCount+1;
+        localStorage.setItem(itemNumber, addedItem);
+      }
+    });
+  });
+</script>
 </head>
 <body>
 <h1 align="center">${item.name} ::: Fruit Detail List</h1>
 <div class="card">
   <h2>Item Number : ${item.itemNumber}</h2>
-  <img src="${item.url}" alt="${item.name}" style="width:100%">
-  <h1>${item.name}</h1>
-  <p class="price">${item.price}</p>
-  <p>${item.description}</p>
+  <input type="hidden" id="itemNumber" value="${item.itemNumber}">
+  <img src="${item.url}" id="itemUrl" alt="${item.name}" style="width:100%" value="${item.url}">
+  <h1 id="itemname">${item.name}</h1>
+  <p class="price" id="itemPrice">${item.price}</p>
+  <p id="itemdescription">${item.description}</p>
   <p>${item.count}</p>
-  <p><a href="itemList.do">View All Items</a></p>
-
+  <p><a href="itemList.do?redirect=true">View All Items</a></p>
+  <p><button id="addtocart">+ Add to Cart</button></p>
+  <p><a href="cart.jsp"><button id="gotocart">  Go  to Cart</button></a></p>
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-

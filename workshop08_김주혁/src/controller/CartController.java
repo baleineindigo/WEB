@@ -5,14 +5,18 @@ import java.util.ArrayList;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.mysql.cj.Session;
 
 import model.Item;
 import model.ItemDao;
 
-public class ItemDetailController implements Controller {
+public class CartController implements Controller {
 
 	@Override
 	public ModelAndView handle(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
 		int itemnum = Integer.parseInt(request.getParameter("itemNumber"));
 		Item item = ItemDao.getInstance().getItem(itemnum);
 
