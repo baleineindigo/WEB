@@ -40,7 +40,7 @@ public class GunManTest {
 								System.out.println("up "+up+"/"+j+" is "+item);
 								break;
 							}else if (item=='T') {
-								if (bangs.remove(up, j)) {
+								if (bangs.remove(up, j)==true) {
 									bangs.put(up, j);
 									System.out.println("ALREADY BANG! up "+up+"/"+j+" is "+item);
 									break;
@@ -65,7 +65,7 @@ public class GunManTest {
 								System.out.println("down "+(i+down)+"/"+j+" is "+item);
 								break;
 							}else if (item=='T') {							
-								if (bangs.remove(i+down, j)) {
+								if (bangs.remove(i+down, j)==true) {
 									bangs.put(i+down, j);
 									System.out.println("ALREADY BANG! down "+(i+down)+"/"+j+" is "+item);
 									break;
@@ -90,7 +90,7 @@ public class GunManTest {
 								System.out.println("left "+i+"/"+left+" is "+item);
 								break;
 							}else if (item=='T') {
-								if (bangs.remove(i, left)) {
+								if (bangs.remove(i, left)==true) {
 									bangs.put(i, left);
 									System.out.println("ALREADY BANG! left "+i+"/"+left+" is "+item);
 									break;
@@ -116,7 +116,7 @@ public class GunManTest {
 								System.out.println("right "+i+"/"+(j+right)+" is "+item);
 								break;
 							}else if (item=='T') {
-								if (bangs.remove(i,j+right)) {
+								if (bangs.remove(i,j+right)==true) {
 									bangs.put(i,j+right);
 									System.out.println("already BANG! right "+i+"/"+(j+right)+" is "+item);
 									break;
@@ -147,7 +147,6 @@ public class GunManTest {
 	}
 	}//main	
 }//class
-
 
 
 
