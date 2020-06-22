@@ -1,5 +1,10 @@
 package controller;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
 public class HandlerMapping {
 	
 	private static HandlerMapping handler = new HandlerMapping();
@@ -21,6 +26,9 @@ public class HandlerMapping {
 		}else if (command.equals("itemInfo.do")) {
 			controller = new ItemInfoController();
 			System.out.println("ItemInfoController...생성...");
+		}else if (command.equals("product.do")) {
+			controller = new ProductViewController();
+			System.out.println("ProductViewController...생성...");
 		}
 		return controller;
 	}
