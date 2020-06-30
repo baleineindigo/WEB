@@ -2,15 +2,13 @@
 
 
 # LAZY-CART
-> Here goes your awesome project description!
-
-<h2 align="center">Support LAZY-CART!</h2>
-LazyCart (레이지카트)는 <b>소비자중심</b>의 "YongHunDotCom-licensed 오픈소스 웹-서비스"입니다. </br>레이지카트는 전적으로 감사하는 후원자님들과 테크니컬-파트너분들의 지속적인 참여을 통하여 운영되어지는 서비스입니다. 
+>LazyCart (레이지카트)는 <b>소비자중심</b>의 "YongHunDotCom-licensed 오픈소스 웹-서비스"입니다. </br>레이지카트는 전적으로 감사하는 후원자님들과 테크니컬-파트너분들의 지속적인 참여을 통하여 운영되어지는 서비스입니다. 
 </br></br>
 저희 LazyCart와 함께하고 싶으시다면:</br>
-<ul>[후원을 통한 참여](https://www.patreon.com/evanyou).
-* [기술적 참여](https://www.patreon.com/evanyou).
-
+<ul>
+	<li>[후원을 통한 참여](https://www.patreon.com/evanyou).</li>
+	<li>[기술적 참여](https://www.patreon.com/evanyou).</li>
+</ul>
 ## Table of contents
 * [서비스 설명](#서비스-설명)
 * [컨셉트](#컨셉트)
