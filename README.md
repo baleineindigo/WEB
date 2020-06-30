@@ -1,30 +1,37 @@
 <p align="center"><a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img width="100" src="cart.png" alt="Vue logo"></a></p>
 
 
-# Project Name
+# LAZY
 > Here goes your awesome project description!
-
 ## Table of contents
-* [General info](#general-info)
-* [Screenshots](#screenshots)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Features](#features)
-* [Status](#status)
-* [Inspiration](#inspiration)
-* [Contact](#contact)
+* [참여하기](#참여하기)</br>
+* [프로젝트 설명](#프로젝트-설명)
+* [컨셉트](#컨셉트)
+* [인터페이스와 기능](#인터페이스와-기능)
+* [프로젝트 구조와 패턴](#프로젝트-구조와-패턴)
+* [데이터베이스](#데이터베이스)
+* [팀워크](#팀워크)
+* [팀소개](#팀소개)
 
-## General info
-Add more general information about project. What the purpose of the project is? Motivation?
+## 참여하기
 
-## Screenshots
-![Example screenshot](./img/screenshot.png)
+## 프로젝트 설명
+
+## 컨셉트
+
+## 인터페이스와 기능
+
+## 프로젝트 구조와 패턴
+
+## 데이터베이스
+
+## 팀워크
+
+## 팀소개
+
+
 
 ## Dependencies
-* Tech 1 - version 1.0
-* Tech 2 - version 2.0
-* Tech 3 - version 3.0
-## Ecosystem
 
 | Project | Status | Description |
 |---------|--------|-------------|
@@ -37,31 +44,3 @@ Add more general information about project. What the purpose of the project is? 
 | [vue-rx]              | [![vue-rx-status]][vue-rx-package] | RxJS integration |
 | [vue-devtools]        | [![vue-devtools-status]][vue-devtools-package] | Browser DevTools extension |
 
-
-## Setup
-Describe how to install / setup your local environement / add link to demo version.
-
-
-
-## Code Examples
-Show examples of usage:
-`put-your-code-here`
-
-## Features
-List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
-
-To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
-
-## Status
-Project is: _in progress_, _finished_, _no longer continue_ and why?
-
-## Inspiration
-Add here credits. Project inspired by..., based on...
-
-## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
