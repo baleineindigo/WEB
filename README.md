@@ -8,8 +8,8 @@
 LazyCart (레이지카트)는 YongHunDotCom-licensed 오픈소스 프로젝트입니다. </br>레이지카트는 전적으로 감사하는 후원자님들과 테크니컬-파트너분들의 지속적인 참여을 통하여 운영되어지는 서비스입니다. 
 </br></br>
 저희 LazyCart와 함께하고 싶으시다면:</br>
-- [후원을 통한 참여](https://www.patreon.com/evanyou).
-- [기술적 참여](https://www.patreon.com/evanyou).
+* [후원을 통한 참여](https://www.patreon.com/evanyou).
+* [기술적 참여](https://www.patreon.com/evanyou).
 
 ## Table of contents
 * [프로젝트 설명](#프로젝트-설명)
