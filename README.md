@@ -1,4 +1,4 @@
-<p align="center"><a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img width="100" src="cart.png" alt="Vue logo"></a></p>
+<p align="center"><a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img src="cart.png" alt="logo"></a></p>
 
 
 # LAZY-CART
@@ -65,20 +65,9 @@ LazyCart (레이지카트)는 <b>소비자중심</b>의 "YongHunDotCom-licensed 
   2. 각자 편한 Github 프로그램 사용
 1.1. master pull >  work > new branch > pull request
 1.2. master pull > work > updated master pull & merge > test > push master  
+
 ## 팀소개
+<img src="bioman.jpg" alt="teamPhoto">
 
 
-
-## Dependencies
-
-| Project | Status | Description |
-|---------|--------|-------------|
-| [vue-router]          | [![vue-router-status]][vue-router-package] | Single-page application routing |
-| [vuex]                | [![vuex-status]][vuex-package] | Large-scale state management |
-| [vue-cli]             | [![vue-cli-status]][vue-cli-package] | Project scaffolding |
-| [vue-loader]          | [![vue-loader-status]][vue-loader-package] | Single File Component (`*.vue` file) loader for webpack |
-| [vue-server-renderer] | [![vue-server-renderer-status]][vue-server-renderer-package] | Server-side rendering support |
-| [vue-class-component] | [![vue-class-component-status]][vue-class-component-package] | TypeScript decorator for a class-based API |
-| [vue-rx]              | [![vue-rx-status]][vue-rx-package] | RxJS integration |
-| [vue-devtools]        | [![vue-devtools-status]][vue-devtools-package] | Browser DevTools extension |
 
